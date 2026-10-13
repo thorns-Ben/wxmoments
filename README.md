@@ -13,7 +13,7 @@
 
 ## 下载 EXE（推荐）
 
-在 GitHub 项目的 **Releases** 页面下载 `wechat-find-v1.0.0-windows-x64.zip`，把压缩包完整解压后，双击 `wechat-find.exe`。不需要安装 Python，也没有需要保持开启的黑色命令行窗口。
+在 GitHub 项目的 **Releases** 页面下载 `wxmoments-v1.0.0-windows-x64.zip`，把压缩包完整解压后，双击 `wxmoments.exe`。不需要安装 Python，也没有需要保持开启的黑色命令行窗口。
 
 请不要只把 EXE 单独复制出来：同目录的 `_internal` 文件夹是运行所需组件。程序数据保存在解压目录内的 `data/moments.db`，升级时请先备份 `data` 文件夹。
 
@@ -76,7 +76,7 @@ build.bat
 
 ## 构建发布包
 
-先运行 `setup.bat`，再双击 `build.bat`。脚本会生成 `dist/wechat-find-v1.0.0-windows-x64.zip` 和对应的 `.sha256` 校验文件。将这两个文件上传到 GitHub Releases；源码分支中不要提交 `dist/`。
+先运行 `setup.bat`，再双击 `build.bat`。脚本会生成 `dist/wxmoments-v1.0.0-windows-x64.zip` 和对应的 `.sha256` 校验文件。将这两个文件上传到 GitHub Releases；源码分支中不要提交 `dist/`。
 
 ## 已知限制
 

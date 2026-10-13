@@ -12,7 +12,7 @@ from .probe import run_probe
 
 _LAUNCH_HELP = ("""【EXE 版启动】
 
-解压整个发布包后，双击 wechat-find.exe 即可运行，无需安装 Python。
+解压整个发布包后，双击 wxmoments.exe 即可运行，无需安装 Python。
 请保留同目录的 _internal 文件夹；数据保存在 EXE 同目录的 data 文件夹。
 EXE 版没有黑色命令行窗口。
 """ if getattr(sys, "frozen", False) else """【源码版运行窗口提醒（重要）】

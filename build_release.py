@@ -38,14 +38,14 @@ def copy_dependency_licenses(destination: Path) -> None:
 
 def main() -> None:
     run("-m", "PyInstaller", "--noconfirm", "--clean", "--onedir", "--windowed",
-        "--name", "wechat-find", "--collect-all", "rapidocr_onnxruntime",
+        "--name", "wxmoments", "--collect-all", "rapidocr_onnxruntime",
         "--collect-all", "onnxruntime", "--collect-all", "uiautomation",
-        "--hidden-import", "win32timezone", str(ROOT / "wechat_launcher.py"))
-    app_dir = DIST / "wechat-find"
+        "--hidden-import", "win32timezone", str(ROOT / "wxmoments.py"))
+    app_dir = DIST / "wxmoments"
     for name in ("README.md", "PRIVACY.md", "LICENSE", "THIRD_PARTY_NOTICES.md"):
         shutil.copy2(ROOT / name, app_dir / name)
     copy_dependency_licenses(app_dir / "THIRD_PARTY_LICENSES")
-    archive = DIST / f"wechat-find-v{VERSION}-windows-x64.zip"
+    archive = DIST / f"wxmoments-v{VERSION}-windows-x64.zip"
     archive.unlink(missing_ok=True)
     with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as zf:
         for item in sorted(app_dir.rglob("*")):
